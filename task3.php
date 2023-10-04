@@ -1,21 +1,19 @@
 <?php
-// Task 3: Break on Condition
+/*
+Create an array called $grades with the following values: 85, 92, 78, 88, 95. 
+Write a PHP function which takes "$grades" as an argument to sort the array 
+in descending order and print the sorted grades as array.
+*/
 
-$prev = 0; 
-$next = 1;
-$answer = 0;
+// Task 3: Array Sorting  
 
-for($step = 0; $step < 10; $step++) 
-{
-    if($step == 0 || $step == 1) {
-        echo "$step ";
-        continue;
-    }
-    
-    $answer = $prev + $next;
-    if($answer > 100) break;
-    echo "$answer ";
-    $prev = $next;
-    $next = $answer;
+$grades = array(85, 92, 78, 88, 95);
+print_reordered_grades( $grades );
+
+function print_reordered_grades( $grades ) {
+    rsort( $grades );    
+    print_r( $grades );
 }
+
 ?>
+
